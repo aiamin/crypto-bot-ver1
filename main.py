@@ -47,7 +47,7 @@ if last_row['SUPERTd_7_3.0'] == 1:
     
     if last_row['ADX_14'] >= 25:
         if last_row['DMP_14'] > last_row['DMN_14']:
-            message1 = f"---------------------------\nat: {last_row['timestamp']} \nSupertrend Signal: **Buy** \nADX Signal: **STRONG UPTREND** \n**BUY**\n---------------------------"
+            message1 = f"---------------------------\nat: {last_row['timestamp']} \nSupertrend Signal: **Buy** \nADX Signal: **STRONG UPTREND** \n**BUY at {last_row['close']}**\n---------------------------"
             print(message1)    
         if last_row['DMN_14'] > last_row['DMP_14']:
             message1 = f"---------------------------\nat: {last_row['timestamp']} \nSupertrend Signal: **Buy** \nADX Signal: **STRONG DOWNTREND** \n**WTF**\n---------------------------"
@@ -65,7 +65,7 @@ if last_row['SUPERTd_7_3.0'] == 0:
             message1 = f"---------------------------\nat: {last_row['timestamp']} \nSupertrend Signal: **SELL** \nADX Signal: **STRONG UPTREND** \n**WTF**\n---------------------------"
             print(message1)    
         if last_row['DMN_14'] > last_row['DMP_14']:
-            message1 = f"---------------------------\nat: {last_row['timestamp']} \nSupertrend Signal: **SELL** \nADX Signal: **STRONG DOWNTREND** \n**SELL**\n---------------------------"
+            message1 = f"---------------------------\nat: {last_row['timestamp']} \nSupertrend Signal: **SELL** \nADX Signal: **STRONG DOWNTREND** \n**SELL at {last_row['close']}**\n---------------------------"
             print(message1)
 
 
