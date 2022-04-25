@@ -71,5 +71,3 @@ if last_row['SUPERTd_7_3.0'] == 0:
 
 payload = {"username": "alertbot","content": message1 }
 requests.post(discord_webhook_url, json=payload)
-
-
